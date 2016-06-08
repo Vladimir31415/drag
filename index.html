@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ZALP</title>
+	<link media="all" rel="stylesheet" href="css/all.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script src="js/jquery.formstyler.js"></script>
+	<script>
+		(function($) {
+		$(function() {
+			$('input, select').styler({
+				selectSearch: true
+			});
+		});
+		})(jQuery);
+	</script>
+	<script src="js/demo.js"></script>
+
+	<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="css/dragstyles.css"> 
+	<link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="bar-left">
+				<div class="button-click">
+					<a href="#" class="short active"></a>
+					<a href="#" class="long"></a>
+				</div>
+				<div class="logo">
+					<a href="#">
+						<img src="images/logo.png" alt="Заказы, Логистика, Производство">
+					</a>
+				</div>
+				<div class="call-box">
+					<span class="mute"></span>
+					<a class="tel" href="#"></a>
+					<div class="time-box">
+						<div class="tb">
+							<span class="time">01 : 35</span>
+						</div>
+					</div>
+				</div>
+				<div class="call-box сall-name" style="display:none">
+					<span class="mute"></span>
+					<a class="tel" href="#"></a>
+					<div class="time-box">
+						<div class="tb">
+							<span class="time">01 : 35</span>
+							<span class="name">Пожидаев Сергей</span>
+						</div>
+					</div>
+				</div>
+				<div class="call-box сall-name no-mute" style="display:none">
+					<span class="mute"></span>
+					<a class="tel" href="#"></a>
+					<div class="time-box">
+						<div class="tb">
+							<span class="time">01 : 35</span>
+							<span class="name">Пожидаев Сергей</span>
+						</div>
+					</div>
+				</div>
+				<div class="call-box dialing number" style="display:none">
+					<a class="tel" href="#"></a>
+					<div class="time-box">
+						<div class="tb">
+							<form class="call-form">
+								<input type="tel">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="call-box dialing focus number" style="display:none">
+					<a class="tel" href="#"></a>
+					<div class="time-box">
+						<div class="tb">
+							<form class="call-form">
+								<input type="tel">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="call-box ac focus number" style="display:none">
+					<a class="tel" href="#"></a>
+					<div class="time-box">
+						<div class="tb">
+							<form class="call-form">
+								<input type="tel">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bar-right">
+				<div class="title-name">
+					<span>Алексей Чурилов</span>
+					<strong>Мастер смены</strong>
+				</div>
+				<div class="link-box">
+					<a class="notif" href="#"></a>
+					<a class="sms" href="#"></a>
+				</div>
+				<div class="date-time">
+					<span>15:45</span>
+					<span class="date">31.01.2016</span>
+				</div>
+			</div>
+			<div class="centr-head">
+				<ul class="buttons-box">
+					<li class="plus">
+						<a href="#" class="plus"></a>
+					</li>
+					<!--<li class="cancell">
+						<a href="#"></a>
+					</li>
+					<li class="save">
+						<a href="#"></a>
+					</li>
+					<li class="duplicate">
+						<a href="#"></a>
+					</li>
+					<li class="problem">
+						<a href="#"></a>
+						<div class="hidd-probl">
+							<span class="arr"></span>
+							<p>Клиент задерживается на 15 минут попросил подождать</p>
+							
+						</div>
+					</li>-->
+				</ul>
+				
+			</div>
+		</header>
+		<main id="main">
+			<aside id="sidebar" class="narrow">
+				<div class="go-box">
+					<span class="tx-base">База</span>
+					<form class="select-form" action="#">
+						<fieldset>
+							<select>
+								<option>Харьков</option>
+								<option>Киев</option>
+								<option>Одесса</option>
+								<option>Львов</option>
+							</select>
+							<select class="unit">
+								<option>Новая почта 1</option>
+								<option>Новая почта 2</option>
+								<option>Новая почта 3</option>
+								<option>Новая почта 4</option>
+							</select>
+						</fieldset>
+					</form>
+					<span class="icon pan">Кухня</span>
+					<ul class="kitchen-list">
+						<li><a href="#"><span>1</span><p>Горячая</p></a></li>
+						<li><a href="#"><span>2</span><p>Холодная</p></a></li>
+						<li><a href="#"><span>3</span><p>Вегетарианская</p></a></li>
+						<li><a href="#" data-tooltip="Холодный цех"><span>4</span><p>Бармены</p></a></li>
+					</ul>
+					<a class="icon box" href="#">Упаковка</a>
+					<a class="icon courier" href="#">Курьер</a>
+					<a class="icon master" href="#">Мастер смены</a>
+				</div>
+				<div class="aside-list">
+					<h2 class="offic">Офис</h2>
+					<a class="icon call" href="#">Звонки</a>
+					<a class="icon tell" href="#">Телефония</a>
+					<a class="icon warning" href="#">Оповещения</a>
+					<a class="icon orders" href="#">Заказы</a>
+					<a class="icon smss" href="#"><span class="quantity">3</span>Сообщения</a>
+				</div>
+			</aside>
+
+			<div id="content">
+				<section class="order-list">
+					<div class="master-head">
+					<ul class="tabset">
+							<li class="zp-an">
+								<a class="active" href="#analit">alp Analytics</a>
+							</li>
+							<li class="zp-maps">
+								<a href="#maps">Zalp Maps</a>
+							</li>
+							<li class="zp-mr">
+								<a href="#market">Zalp Market</a>
+							</li>
+							<li class="zp-zm">
+								<a href="#zmail">Zmail</a>
+							</li>
+						</ul>
+					</div>
+						
+					<div class="tab-content" id="analit">
+						<ul class="tb-bx stats">
+							<li>
+								<div class="hd_tabs">
+									<h2>Заказы за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Заказов в обработке</p>
+										<span class="num-big blue">11</span>
+									</li>
+									<li>
+										<p>Заказов в производстве</p>
+										<span class="num-big">23</span>
+									</li>
+									<li>
+										<p>Заказов в упаковке</p>
+										<span class="num-big">8</span>
+									</li>
+									<li>
+										<p>Заказов в пути</p>
+										<span class="num-big">34</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx last-orders">
+							<li>
+								<div class="hd_tabs">
+									<h2>Cтатусы заказов</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Поступило за посл. 30 минут</p>
+										<span class="num-big blue">18</span>
+									</li>
+									<li>
+										<p>Доставлено за посл. 30 минут</p>
+										<span class="num-big">18</span>
+									</li>
+									<li>
+										<p>Отказано запосл. 30 минут</p>
+										<span class="num-big">4</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx routes pink">
+							<li>
+								<div class="hd_tabs">
+									<h2>Маршруты за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>среднее отклонение маршрута за посл. 30 минут </p>
+										<span class="num-big red">4:06 <em>мин</em></span>
+									</li>
+									<li>
+										<p>среднее отклонение маршрута за сегодня</p>
+										<span class="num-big vinous">8:31 <em>мин</em></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx couriers-box">
+							<li>
+								<div class="hd_tabs">
+									<h2>Курьеры</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Сколько курьеров на смене</p>
+										<span class="num-big blue">44</span>
+									</li>
+									<li>
+										<p>Заказов в среднем на курьера в маршруте</p>
+										<span class="num-big">11</span>
+									</li>
+									<li>
+										<p>Необходимо курьеров на данный момент</p>
+										<span class="num-big red">+2</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx warning">
+							<li>
+								<div class="hd_tabs">
+									<h2>Оповещения</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Проблемных заказаов</p>
+										<span class="num-big blue">20</span>
+									</li>
+									<li>
+										<p>Проблемных маршрутов</p>
+										<span class="num-big">4</span>
+									</li>
+									<li>
+										<p>Проблемных ситуаций</p>
+										<span class="num-big">17</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx orders-section">
+							<li>
+								<div class="hd_tabs">
+									<h2>Срез заказов за день</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Доставленных заказов</p>
+										<span class="num-big green">44</span>
+									</li>
+									<li>
+										<p>Отложенных заказов</p>
+										<span class="num-big orang">12</span>
+									</li>
+									<li>
+										<p>Отказанных заказов</p>
+										<span class="num-big red">21</span>
+									</li>
+									<li>
+										<p>Общее кол-во поступивших</p>
+										<span class="num-big blue">92</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content" id="maps">
+						<ul class="tb-bx last-orders">
+							<li>
+								<div class="hd_tabs">
+									<h2>Cтатусы заказов</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Поступило за посл. 30 минут</p>
+										<span class="num-big blue">18</span>
+									</li>
+									<li>
+										<p>Доставлено за посл. 30 минут</p>
+										<span class="num-big">18</span>
+									</li>
+									<li>
+										<p>Отказано запосл. 30 минут</p>
+										<span class="num-big">4</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx stats">
+							<li>
+								<div class="hd_tabs">
+									<h2>Заказы за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Заказов в обработке</p>
+										<span class="num-big blue">11</span>
+									</li>
+									<li>
+										<p>Заказов в производстве</p>
+										<span class="num-big">23</span>
+									</li>
+									<li>
+										<p>Заказов в упаковке</p>
+										<span class="num-big">8</span>
+									</li>
+									<li>
+										<p>Заказов в пути</p>
+										<span class="num-big">34</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx routes">
+							<li>
+								<div class="hd_tabs">
+									<h2>Маршруты за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>среднее отклонение маршрута за посл. 30 минут </p>
+										<span class="num-big red">4:06 <em>мин</em></span>
+									</li>
+									<li>
+										<p>среднее отклонение маршрута за сегодня</p>
+										<span class="num-big vinous">8:31 <em>мин</em></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx couriers-box  pink">
+							<li>
+								<div class="hd_tabs">
+									<h2>Курьеры</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Сколько курьеров на смене</p>
+										<span class="num-big blue">44</span>
+									</li>
+									<li>
+										<p>Заказов в среднем на курьера в маршруте</p>
+										<span class="num-big">11</span>
+									</li>
+									<li>
+										<p>Необходимо курьеров на данный момент</p>
+										<span class="num-big red">+2</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx warning">
+							<li>
+								<div class="hd_tabs pink">
+									<h2>Оповещения</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Проблемных заказаов</p>
+										<span class="num-big blue">20</span>
+									</li>
+									<li>
+										<p>Проблемных маршрутов</p>
+										<span class="num-big">4</span>
+									</li>
+									<li>
+										<p>Проблемных ситуаций</p>
+										<span class="num-big">17</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx orders-section">
+							<li>
+								<div class="hd_tabs">
+									<h2>Срез заказов за день</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Доставленных заказов</p>
+										<span class="num-big green">44</span>
+									</li>
+									<li>
+										<p>Отложенных заказов</p>
+										<span class="num-big orang">12</span>
+									</li>
+									<li>
+										<p>Отказанных заказов</p>
+										<span class="num-big red">21</span>
+									</li>
+									<li>
+										<p>Общее кол-во поступивших</p>
+										<span class="num-big blue">92</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content" id="market">
+						<ul class="tb-bx stats">
+							<li>
+								<div class="hd_tabs">
+									<h2>Заказы за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Заказов в обработке</p>
+										<span class="num-big blue">11</span>
+									</li>
+									<li>
+										<p>Заказов в производстве</p>
+										<span class="num-big">23</span>
+									</li>
+									<li>
+										<p>Заказов в упаковке</p>
+										<span class="num-big">8</span>
+									</li>
+									<li>
+										<p>Заказов в пути</p>
+										<span class="num-big">34</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx last-orders">
+							<li>
+								<div class="hd_tabs">
+									<h2>Cтатусы заказов</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Поступило за посл. 30 минут</p>
+										<span class="num-big blue">18</span>
+									</li>
+									<li>
+										<p>Доставлено за посл. 30 минут</p>
+										<span class="num-big">18</span>
+									</li>
+									<li>
+										<p>Отказано запосл. 30 минут</p>
+										<span class="num-big">4</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx routes  pink">
+							<li>
+								<div class="hd_tabs">
+									<h2>Маршруты за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>среднее отклонение маршрута за посл. 30 минут </p>
+										<span class="num-big red">4:06 <em>мин</em></span>
+									</li>
+									<li>
+										<p>среднее отклонение маршрута за сегодня</p>
+										<span class="num-big vinous">8:31 <em>мин</em></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx couriers-box">
+							<li>
+								<div class="hd_tabs">
+									<h2>Курьеры</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Сколько курьеров на смене</p>
+										<span class="num-big blue">44</span>
+									</li>
+									<li>
+										<p>Заказов в среднем на курьера в маршруте</p>
+										<span class="num-big">11</span>
+									</li>
+									<li>
+										<p>Необходимо курьеров на данный момент</p>
+										<span class="num-big red">+2</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx warning">
+							<li>
+								<div class="hd_tabs">
+									<h2>Оповещения</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Проблемных заказаов</p>
+										<span class="num-big blue">20</span>
+									</li>
+									<li>
+										<p>Проблемных маршрутов</p>
+										<span class="num-big">4</span>
+									</li>
+									<li>
+										<p>Проблемных ситуаций</p>
+										<span class="num-big">17</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx orders-section  pink">
+							<li>
+								<div class="hd_tabs">
+									<h2>Срез заказов за день</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Доставленных заказов</p>
+										<span class="num-big green">44</span>
+									</li>
+									<li>
+										<p>Отложенных заказов</p>
+										<span class="num-big orang">12</span>
+									</li>
+									<li>
+										<p>Отказанных заказов</p>
+										<span class="num-big red">21</span>
+									</li>
+									<li>
+										<p>Общее кол-во поступивших</p>
+										<span class="num-big blue">92</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content" id="zmail">
+						<ul class="tb-bx stats">
+							<li>
+								<div class="hd_tabs">
+									<h2>Заказы за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Заказов в обработке</p>
+										<span class="num-big blue">11</span>
+									</li>
+									<li>
+										<p>Заказов в производстве</p>
+										<span class="num-big">23</span>
+									</li>
+									<li>
+										<p>Заказов в упаковке</p>
+										<span class="num-big">8</span>
+									</li>
+									<li>
+										<p>Заказов в пути</p>
+										<span class="num-big">34</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx last-orders">
+							<li>
+								<div class="hd_tabs">
+									<h2>Cтатусы заказов</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Поступило за посл. 30 минут</p>
+										<span class="num-big blue">18</span>
+									</li>
+									<li>
+										<p>Доставлено за посл. 30 минут</p>
+										<span class="num-big">18</span>
+									</li>
+									<li>
+										<p>Отказано запосл. 30 минут</p>
+										<span class="num-big">4</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx routes pink">
+							<li>
+								<div class="hd_tabs">
+									<h2>Маршруты за последние 30 минут</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>среднее отклонение маршрута за посл. 30 минут </p>
+										<span class="num-big red">4:06 <em>мин</em></span>
+									</li>
+									<li>
+										<p>среднее отклонение маршрута за сегодня</p>
+										<span class="num-big vinous">8:31 <em>мин</em></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx couriers-box">
+							<li>
+								<div class="hd_tabs">
+									<h2>Курьеры</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Сколько курьеров на смене</p>
+										<span class="num-big blue">44</span>
+									</li>
+									<li>
+										<p>Заказов в среднем на курьера в маршруте</p>
+										<span class="num-big">11</span>
+									</li>
+									<li>
+										<p>Необходимо курьеров на данный момент</p>
+										<span class="num-big red">+2</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx warning">
+							<li>
+								<div class="hd_tabs">
+									<h2>Оповещения</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Проблемных заказаов</p>
+										<span class="num-big blue">20</span>
+									</li>
+									<li>
+										<p>Проблемных маршрутов</p>
+										<span class="num-big">4</span>
+									</li>
+									<li>
+										<p>Проблемных ситуаций</p>
+										<span class="num-big">17</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="tb-bx orders-section">
+							<li>
+								<div class="hd_tabs">
+									<h2>Срез заказов за день</h2>
+									<span class="rotate"></span>
+								</div>
+								<ul>
+									<li>
+										<p>Доставленных заказов</p>
+										<span class="num-big green">44</span>
+									</li>
+									<li>
+										<p>Отложенных заказов</p>
+										<span class="num-big orang">12</span>
+									</li>
+									<li>
+										<p>Отказанных заказов</p>
+										<span class="num-big red">21</span>
+									</li>
+									<li>
+										<p>Общее кол-во поступивших</p>
+										<span class="num-big blue">92</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="hold-content">
+						<div class="left-cont">
+							<div class="tabl-heading">
+							<table>
+								<tr class="head-ord">
+									<td class="numb">
+										<span class="arr">№</span>
+									</td>
+									<td class="times">
+										<span class="arr">Время</span>
+									</td>
+									<td class="status">
+										<select>
+											<option>Все статусы</option>
+											<option>Все статусы</option>
+											<option>Все статусы</option>
+										</select>
+									</td>
+									<td class="cont-cl">
+										<span>Контакты клиента</span>
+									</td>
+									<td class="addr-cl">
+										<span>Адрес клиента</span>
+									</td>
+									<td class="courier">
+										<span>Курьер</span>
+									</td>
+									<td class="oper">
+										<span>Оператор</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="scroll-list">
+							<div id="orders-list" class="table">			
+								<div class="br-white-row ui-widget-content" data-interaction="order-draggable">
+									<div class="numb">
+										<div class="tr-fon">
+											<span>#289</span>
+										</div>
+									</div>
+									<div class="times">
+										<div class="tr-fon">
+											<span class="arrow">17 : 45<em class="ven">+05:11</em></span>
+											<span class="flag">18 : 22<em class="red">+06:12</em><span class="err-red"></span></span>
+										</div>
+									</div>
+									<div class="city">
+										<div class="tr-fon">
+											<span> в пути</span>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Анна</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="addr-cl">
+										<div class="tr-fon">
+											<span>пер. Отакара Яроша 18Г</span>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Евгений Коричнеый</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Ирина Климова</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="oper">
+										<div class="tr-fon">
+											<span class="comm"></span>
+											<div class="drop-comm">
+											<div class="wh">
+												<a href="#">
+													<span>Алёна Дмитриева</span>
+													<span>01.03.2016</span>
+												</a>
+												<p class="cl">Постоянный клиент</p>
+												<p class="pl">Остановиться рядом с кафе Корица</p>
+												<p class="mn"><span>Без икры,</span><span>Положить в общий пакет.</span><span> Без васаби</span> Без соевого соуса</span></p>
+												</div>
+												<form class="gr">
+													<textarea class="text-wr"></textarea>
+													<button class="wr-comm">Написать комментарий</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="comp">
+										<div class="tr-fon">
+											<span class="bx"></span>
+											<span class="menu-box"></span>
+											<ul class="drop-links">
+												<li class="boxx">
+													<a href="#"></a>
+												</li>
+												<li class="duplicate">
+													<a href="#"></a>
+												</li>
+												<li class="tech">
+													<a href="#"></a>
+												</li>
+												<li class="cancell">
+													<a href="#"></a>
+												</li>
+												<li class="dnk">
+													<a href="#"></a>
+												</li>
+												<li class="save">
+													<a href="#"></a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="br-white-row ui-widget-content">
+									<div class="numb">
+										<div class="tr-fon">
+											<span>#155</span>
+										</div>
+									</div>
+									<div class="times">
+										<div class="tr-fon">
+											<span class="arrow">17 : 45<em class="ven">+05:11</em></span>
+											<span class="flag">18 : 22<em class="red">+06:12</em><span class="err-red"></span></span>
+										</div>
+									</div>
+									<div class="city">
+										<div class="tr-fon">
+											<span> в пути</span>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Анна</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="addr-cl">
+										<div class="tr-fon">
+											<span>пер. Отакара Яроша 18Г</span>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Евгений Коричнеый</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Ирина Климова</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="oper">
+										<div class="tr-fon">
+											<span class="comm"></span>
+											<div class="drop-comm">
+											<div class="wh">
+												<a href="#">
+													<span>Алёна Дмитриева</span>
+													<span>01.03.2016</span>
+												</a>
+												<p class="cl">Постоянный клиент</p>
+												<p class="pl">Остановиться рядом с кафе Корица</p>
+												<p class="mn"><span>Без икры,</span><span>Положить в общий пакет.</span><span> Без васаби</span> Без соевого соуса</span></p>
+												</div>
+												<form class="gr">
+													<textarea class="text-wr"></textarea>
+													<button class="wr-comm">Написать комментарий</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="comp">
+										<div class="tr-fon">
+											<span class="bx"></span>
+											<span class="menu-box"></span>
+											<ul class="drop-links">
+												<li class="boxx">
+													<a href="#"></a>
+												</li>
+												<li class="duplicate">
+													<a href="#"></a>
+												</li>
+												<li class="tech">
+													<a href="#"></a>
+												</li>
+												<li class="cancell">
+													<a href="#"></a>
+												</li>
+												<li class="dnk">
+													<a href="#"></a>
+												</li>
+												<li class="save">
+													<a href="#"></a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div data-interaction="order-draggable" class="br-white-row ui-widget-content">
+									<div class="numb">
+										<div class="tr-fon">
+											<span>#340</span>
+										</div>
+									</div>
+									<div class="times">
+										<div class="tr-fon">
+											<span class="arrow">17 : 45<em class="ven">+05:11</em></span>
+											<span class="flag">18 : 22<em class="red">+06:12</em><span class="err-red"></span></span>
+										</div>
+									</div>
+									<div class="city">
+										<div class="tr-fon">
+											<span> в пути</span>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Анна</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="addr-cl">
+										<div class="tr-fon">
+											<span>пер. Отакара Яроша 18Г</span>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Евгений Коричнеый</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="name">
+										<div class="tr-fon">
+											<span>Ирина Климова</span>
+											<a href="#">+38 (050) 066 51 37</a>
+										</div>
+									</div>
+									<div class="oper">
+										<div class="tr-fon">
+											<span class="comm"></span>
+											<div class="drop-comm">
+											<div class="wh">
+												<a href="#">
+													<span>Алёна Дмитриева</span>
+													<span>01.03.2016</span>
+												</a>
+												<p class="cl">Постоянный клиент</p>
+												<p class="pl">Остановиться рядом с кафе Корица</p>
+												<p class="mn"><span>Без икры,</span><span>Положить в общий пакет.</span><span> Без васаби</span> Без соевого соуса</span></p>
+												</div>
+												<form class="gr">
+													<textarea class="text-wr"></textarea>
+													<button class="wr-comm">Написать комментарий</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="comp">
+										<div class="tr-fon">
+											<span class="bx"></span>
+											<span class="menu-box"></span>
+											<ul class="drop-links">
+												<li class="boxx">
+													<a href="#"></a>
+												</li>
+												<li class="duplicate">
+													<a href="#"></a>
+												</li>
+												<li class="tech">
+													<a href="#"></a>
+												</li>
+												<li class="cancell">
+													<a href="#"></a>
+												</li>
+												<li class="dnk">
+													<a href="#"></a>
+												</li>
+												<li class="save">
+													<a href="#"></a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-cont">
+						<div class="tabl-heading">
+							<table>
+								<tr class="head-ord">
+									<td class="numb">
+										<span class="arr">№</span>
+									</td>
+									<td class="times">
+										<span class="arr">Ст</span>
+									</td>
+									<td class="an">
+										<span>Аналитика</span>
+									</td>
+									<td class="courier">
+										<span>Курьер</span>
+									</td>
+									<td class="route-orders">
+										<span>Заказы маршрута</span>
+									</td>
+									<td class="rt-cur">
+										<span class="cur">Курьеры</span>
+										<span class="rt">Маршруты</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="scroll-list">
+							<div class="test-div"></div>
+							<div class="test-div"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+	<div class="popup popup1">
+		<div class="popup-box" id="popup1">
+		<!--<a class="close" href="#">close</a>-->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.3135845080888!2d36.254408016061916!3d49.93045697940694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41270acc0c905291%3A0x95f5142f51ecd283!2z0LLRg9C7LiDQn9GW0LLQtNC10L3QvdC-0L_RgNC-0LXQutGC0L3QsCwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1458304467927" width="900" height="650" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+</body>
+
+</html>
