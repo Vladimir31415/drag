@@ -26,7 +26,7 @@ $(function() {
 		},
 	});
 
-	let ordersStorage = {};
+	var ordersStorage = {};
 	$('.test-div').droppable({
 		hoverClass: "ui-state-hover",
 		accept: ".br-white-row",
@@ -44,6 +44,12 @@ $(function() {
 	$('.test-div').on('click',".closeBtn",(e) => {
 		restoreFullOrder(e);
 	});
+
+	function restoreFullOrder(e){
+		let orderNum = $(e.target).data('order-num');
+		$(e.target).parent().detach();
+		$('#orders-list').append(ordersStorage[orderNum]);
+	}
 });
 
 function drawSmallOrders(e,ui) {
@@ -53,9 +59,5 @@ function drawSmallOrders(e,ui) {
 	return orderNum;
 }
 
-function restoreFullOrder(e){
-	let orderNum = $(e.target).data('order-num');
-	$(e.target).parent().detach();
-	$('#orders-list').append(ordersStorage[orderNum]);
-}
+
 
