@@ -1,10 +1,7 @@
 'use strict';
 $(function() {
-/*	function moveAt(e,obj) {
-	    obj.style.left = e.pageX - obj.offsetWidth / 2 + 'px';
-	    obj.style.top = e.pageY - obj.offsetHeight / 2 + 'px';
-	}*/
-	// $('.br-white-row').disableSelection();
+	var ordersStorage = {};
+
 	$('.br-white-row[data-interaction="order-draggable"]').draggable({
 		// helper:"clone",
 		cursorAt:{
@@ -16,7 +13,7 @@ $(function() {
 			if ($(e.target).hasClass('br-white-row')) dragDiv = $(e.target);
 			else var dragDiv = $(e.target).parents(".br-white-row");
 
-			return $('<div></div>').addClass('drag-helper')
+			return $('<div data-interaction="order-draggable"></div>').addClass('drag-helper').draggable()
 				.height(dragDiv.height())
 				.text(dragDiv.find('.tr-fon:first').text().trim().slice(1))
 				.appendTo($('body')).css({
@@ -26,11 +23,10 @@ $(function() {
 		},
 	});
 
-	var ordersStorage = {};
 	$('.test-div').droppable({
 		hoverClass: "ui-state-hover",
 		accept: ".br-white-row",
-		drop: (e,ui) => {
+		drop(e,ui) {
 			var orderNum = drawSmallOrders(e,ui);
 			if(ui.draggable.data('interaction') == 'order-draggable') {
 				ordersStorage[orderNum] = ui.draggable;
@@ -53,9 +49,20 @@ $(function() {
 });
 
 function drawSmallOrders(e,ui) {
+	let parent = e.target;
+	let neighbour;
+	parent.childNodes.forEach((child,key) => {
+		if(e.pageX <= child.offsetLeft && neighbour === undefined) {
+			neighbour = child;
+		}
+	})
 	let orderNum = +ui.draggable.find('.tr-fon:first').text().trim().slice(1);
-	let order = $('<div>'+orderNum+'</div>').addClass('courier-order-sm').appendTo($(e.target));
-	let closeBtn = $('<span data-order-num='+orderNum+'>x</span>').addClass('closeBtn').appendTo(order);
+	console.log(neighbour);
+	if(neighbour)
+		var smallOrder = $('<div>'+orderNum+'</div>').addClass('courier-order-sm').insertBefore($(neighbour));
+	else
+		var smallOrder = $('<div>'+orderNum+'</div>').addClass('courier-order-sm').appendTo($(parent));
+	let closeBtn = $('<span data-order-num='+orderNum+'>x</span>').addClass('closeBtn').appendTo(smallOrder);
 	return orderNum;
 }
 
